@@ -1,0 +1,60 @@
+body {
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    270deg,
+    #ffffff 15%,
+    #b4efff 52%,
+    #ffffff 90%
+  );
+}
+
+a {
+  text-decoration: none;
+  color: #1f437ab0;
+}
+
+.search {
+  display: block;
+  text-align: center;
+  align-content: center;
+  margin-top: 10px;
+}
+.cityName {
+  padding-bottom: 15px;
+}
+
+.currentTemp {
+  padding-top: 25px;
+}
+
+.currWeatherDetailed {
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.container {
+  display: block;
+  margin: 10 auto;
+  padding: 15px 15px 15px 15px;
+}
+
+.current-weather {
+  font-size: 20px;
+  padding: 50px;
+  text-align: center;
+}
+
+.current-icon {
+  font-size: 100px;
+}
+
+.forecast {
+  font-size: 15px;
+  padding: 20px;
+}
+
+.footer {
+  font-size: 8px;
+  text-align: center;
+  padding-top: 50px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/893aacfd9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row search">
+        <div class="col">
+          <form id="citySearch">
+            <input type="search" placeholder="search" id="city-input" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div class="row search">
+        <div class="col">
+          <button id="currentLocation">Current Location</button>
+        </div>
+      </div>
+
+      <div class="current-weather">
+        <div class="row">
+          <div class="col">
+            <h1 class="cityName" id="cityName"></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-2"><i class="fas fa-cloud-sun current-icon"></i></div>
+          <div class="col-2">
+            <h2>
+              <span id="currentTemp"></span
+              ><!--<a href="#" id="celsius">-->°C<!--</a> |
+              <a href="#" id="fahrenheit">°F</a>-->
+            </h2>
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <br />
+        <div class="currWeatherDetailed">
+          <div class="row">
+            <div class="col" id="weatherDescribed"></div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <span id="todayMax"></span>°c / <span id="todayMin"></span>°c
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">Feels like <span id="feelsLike"></span>°c</div>
+          </div>
+          <div class="row">
+            <div class="col" id="currentTime"></div>
+          </div>
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain forecast-icon"></i>
+          </div>
+          <div class="col"><i class="fas fa-cloud-sun forecast-icon"></i></div>
+          <div class="col"><i class="fas fa-cloud-rain forecast-icon"></i></div>
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain forecast-icon"></i>
+          </div>
+          <div class="col"><i class="fas fa-cloud-sun forecast-icon"></i></div>
+          <div class="col-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col">15°c / 4°c</div>
+          <div class="col">15°c / 7°c</div>
+          <div class="col">17°c / 7°c</div>
+          <div class="col">19°c / 8°c</div>
+          <div class="col">21°c / 8°c</div>
+          <div class="col-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col">Tuesday</div>
+          <div class="col">Wednesday</div>
+          <div class="col">Thursday</div>
+          <div class="col">Friday</div>
+          <div class="col">Saturday</div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+      <div class="row footer">
+        <div class="col">Coded By Sam Blanchard</div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+    <script src="src/currentTime.js"></script>
+    <!--<script src="src/weatherApi.js"></script>
+    -->
+  </body>
+</html>
