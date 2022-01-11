@@ -20,97 +20,76 @@
   </head>
   <body>
     <div class="container">
-      <div class="row search">
-        <div class="col">
-          <form id="citySearch">
-            <input type="search" placeholder="search" id="city-input" />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-      </div>
-      <div class="row search">
-        <div class="col">
-          <button id="currentLocation">Current Location</button>
-        </div>
-      </div>
-
-      <div class="current-weather">
-        <div class="row">
+      <div class="weather-app">
+        <div class="row search">
           <div class="col">
-            <h1 class="cityName" id="cityName"></h1>
+            <form id="citySearch">
+              <input type="search" placeholder="search" id="city-input" />
+              <input type="submit" value="Submit" />
+              <button id="currentLocation">Current Location</button>
+            </form>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-4"></div>
-          <div class="col-2"><i class="fas fa-cloud-sun current-icon"></i></div>
-          <div class="col-2">
-            <h2>
-              <span id="currentTemp"></span
-              ><!--<a href="#" id="celsius">-->°C<!--</a> |
-              <a href="#" id="fahrenheit">°F</a>-->
-            </h2>
-          </div>
-          <div class="col-6"></div>
-        </div>
-        <br />
-        <div class="currWeatherDetailed">
-          <div class="row">
-            <div class="col" id="weatherDescribed"></div>
-          </div>
+        <div class="current-weather">
           <div class="row">
             <div class="col">
-              <span id="todayMax"></span>°c / <span id="todayMin"></span>°c
+              <h1 class="cityName" id="cityName"></h1>
+              <span class="currWeatherDetailed"><ul>
+                <li><span id="currentTime"></span>, <span id="weatherDescribed"></span></li>
+                <li><span id="todayMax"></span>°c / <span id="todayMin"></span>°c, <span>Feels like <span id="feelsLike"></span>°c</span></li>
+              </ul>
+              </span>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-sun current-icon"></i><h2><span id="currentTemp"></span
+                ><!--<a href="#" id="celsius">-->°C<!--</a> |
+              <a href="#" id="fahrenheit">°F</a>-->
+              </h2>
             </div>
           </div>
+          <br />
+        </div>
+        <div class="forecast">
           <div class="row">
-            <div class="col">Feels like <span id="feelsLike"></span>°c</div>
+            <div class="col">
+              <ul>
+                <li><i class="fas fa-cloud-sun-rain forecast-icon"></i></li>
+                <li><span>15°c / 4°c</span></li>
+                <li><span>Tuesday</span></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="fas fa-cloud-sun forecast-icon"></i></li>
+                <li><span>15°c / 7°c</span></li>
+                <li><span>Wednesday</span></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="fas fa-cloud-rain forecast-icon"></i></li>
+                <li><span>17°c / 7°c</span></li>
+                <li><span>Thursday</span></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="fas fa-cloud-sun-rain forecast-icon"></i></li>
+                <li><span>19°c / 8°c</span></li>
+                <li><span>Friday</span></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul>
+                <li><i class="fas fa-cloud-sun forecast-icon"></i></li>
+                <li><span>21°c / 8°c</span></li>
+                <li><span>Saturday</span></li>
+              </ul>
+            </div>
           </div>
-          <div class="row">
-            <div class="col" id="currentTime"></div>
-          </div>
-        </div>
-      </div>
-      <div class="forecast">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain forecast-icon"></i>
-          </div>
-          <div class="col"><i class="fas fa-cloud-sun forecast-icon"></i></div>
-          <div class="col"><i class="fas fa-cloud-rain forecast-icon"></i></div>
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain forecast-icon"></i>
-          </div>
-          <div class="col"><i class="fas fa-cloud-sun forecast-icon"></i></div>
-          <div class="col-3"></div>
-        </div>
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col">15°c / 4°c</div>
-          <div class="col">15°c / 7°c</div>
-          <div class="col">17°c / 7°c</div>
-          <div class="col">19°c / 8°c</div>
-          <div class="col">21°c / 8°c</div>
-          <div class="col-3"></div>
-        </div>
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col">Tuesday</div>
-          <div class="col">Wednesday</div>
-          <div class="col">Thursday</div>
-          <div class="col">Friday</div>
-          <div class="col">Saturday</div>
-          <div class="col-3"></div>
-        </div>
       </div>
       <div class="row footer">
-        <div class="col">
-          Coded By Sam Blanchard
-          <br />
-          <a href="https://github.com/SamSerKit/weather-app"
-            >GitHub Respository Link</a
-          >
-        </div>
+        <a href="https://github.com/SamSerKit/weather-app">Open-source code</a>
+        by Sam Blanchard
       </div>
     </div>
     <script src="src/script.js"></script>
