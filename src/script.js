@@ -17,9 +17,10 @@ function search(city) {
 // displays weather data for selected city
 function showTemperature(response) {
   // display current temperature on page
-  document.querySelector("#currentTemp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#currentTemp").innerHTML =
+    Math.round(celsiusTemperature);
+
   // display city name on page
   document.querySelector("#cityName").innerHTML = response.data.name;
 
@@ -63,9 +64,6 @@ function showTemperature(response) {
 let citySearch = document.querySelector("#citySearch");
 citySearch.addEventListener("submit", handleSubmit);
 
-// pre selected city so live data loads to page on opening, rather than waiting for user input
-search("Melbourne");
-
 // requests current location of user and gets weather information for that location
 function currentPosition(position) {
   let apiKey = "214cd21ef5b7a8732f19634dcd0aa2e7";
@@ -84,3 +82,29 @@ function getCurrentPosition() {
 // listening for user click of "Current Location" button
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentPosition);
+
+// Update displayed Temperature Units
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#currentTemp").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+function showCelsiusTemperature(event) {
+  event.preventDafault();
+  document.querySelector("#currentTemp").innerHTML =
+    Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+// pre selected city so live data loads to page on opening, rather than waiting for user input
+search("Melbourne");
