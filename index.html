@@ -24,13 +24,12 @@
         <div class="row search">
           <div class="col">
             <form id="citySearch">
-              <input type="search" placeholder="search" id="city-input" />
-              <input type="submit" value="Submit" />
-              <button id="currentLocation">Current Location</button>
+              <input type="search" placeholder="search" class="city-input" id="city-input" />
+              <input type="submit" class="city-button" value="Submit" />
+              <button class="city-button" id="currentLocation">Current Location</button>
             </form>
           </div>
-        <div class="current-weather">
-          <div class="row">
+          <div class="row current">
             <div class="col">
               <h1 class="cityName" id="cityName"></h1>
               <span class="currWeatherDetailed"><ul>
@@ -46,10 +45,7 @@
               </h2>
             </div>
           </div>
-          <br />
-        </div>
-        <div class="forecast">
-          <div class="row">
+          <div class="row forecast">
             <div class="col">
               <ul>
                 <li><i class="fas fa-cloud-sun-rain forecast-icon"></i></li>
@@ -87,11 +83,11 @@
             </div>
           </div>
       </div>
-      <div class="row footer">
+    </div>  
+    <div class="row footer">
         <a href="https://github.com/SamSerKit/weather-app">Open-source code</a>
         by Sam Blanchard
       </div>
-    </div>
     <script src="src/script.js"></script>
     <script src="src/currentTime.js"></script>
     <!--<script src="src/weatherApi.js"></script>

@@ -10,6 +10,9 @@ body {
 
 li {
   list-style: none;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 
 a {
@@ -31,8 +34,26 @@ a {
   align-content: center;
   margin-top: 10px;
 }
+
+.city-input {
+  display: inline-block;
+  width: 70%;
+  border-radius: 6px;
+  border-width: 1px;
+  padding: 3px;
+}
+
+.city-button {
+  border-radius: 6px;
+  border-width: 1px;
+  padding: 6px;
+  font-size: 14px;
+  background-color: rgb(65 50 100 / 8%);
+}
 .cityName {
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  padding-left: 25px;
 }
 
 .currentTemp {
@@ -50,9 +71,9 @@ a {
   padding: 15px 15px 15px 15px;
 }
 
-.current-weather {
+.current {
   font-size: 20px;
-  padding: 50px;
+  padding: 75px 50px 50px 60px;
   text-align: center;
 }
 
@@ -62,12 +83,12 @@ a {
 
 .forecast {
   font-size: 15px;
-  padding: 20px;
+  padding: 20px 10px 10px 10px;
 }
 
 .footer {
   font-size: 8px;
   display: block;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 10px;
 }
