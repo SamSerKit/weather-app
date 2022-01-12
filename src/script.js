@@ -42,6 +42,11 @@ function showTemperature(response) {
     response.data.main.feels_like
   );
 
+  // display current wind speed
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+
   // display correct weather icon for location and have correct alt text for img
   document
     .querySelector("#weather-icon")
