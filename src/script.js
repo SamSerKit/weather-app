@@ -98,7 +98,7 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 function showCelsiusTemperature(event) {
-  event.preventDafault();
+  event.preventDefault();
   document.querySelector("#currentTemp").innerHTML =
     Math.round(celsiusTemperature);
 }
