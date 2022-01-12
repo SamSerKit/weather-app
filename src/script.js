@@ -41,6 +41,14 @@ function showTemperature(response) {
   document.querySelector("#feelsLike").innerHTML = Math.round(
     response.data.main.feels_like
   );
+
+  // display correct weather icon for location
+  document
+    .querySelector("#weather-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 // listening for user submissionn of city to display weather for
