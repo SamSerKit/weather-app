@@ -18,7 +18,7 @@
     ></script>
     <title>Weather</title>
   </head>
-  <body>
+  <body class="clearDay">
     <div class="container">
       <div class="weather-app">
         <div class="row search">
@@ -36,7 +36,7 @@
                 <li>Updated: <span id="currentTime"></span></li>
                 <li><span id="weatherDescribed"></span></li>
                 <li>Feels like <span id="feelsLike"></span>°c</li>
-                <li>Wind Speed: <span id="wind"></span> <span id="windSpeed">km/s</span></li>
+                <li>Wind Speed: <span id="wind"></span> <span id="windSpeed">m/s</span></li>
               </ul>
               </span>
             </div>
@@ -46,46 +46,10 @@
                 ><a href="#" id="celsius" class="active">°C</a> |
               <a href="#" id="fahrenheit">°F</a>
               </h2>
-              <small><span id="todayMax"></span>°c / <span id="todayMin"></span>°c</small>
+              <!-- <small><span id="todayMax"></span>°c / <span id="todayMin"></span>°c</small> -->
             </div>
           </div>
-          <div class="row forecast">
-            <div class="col">
-              <ul>
-                <li><i class="fas fa-cloud-sun-rain forecast-icon"></i></li>
-                <li><span>15°c / 4°c</span></li>
-                <li><span>Tuesday</span></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><i class="fas fa-cloud-sun forecast-icon"></i></li>
-                <li><span>15°c / 7°c</span></li>
-                <li><span>Wednesday</span></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><i class="fas fa-cloud-rain forecast-icon"></i></li>
-                <li><span>17°c / 7°c</span></li>
-                <li><span>Thursday</span></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><i class="fas fa-cloud-sun-rain forecast-icon"></i></li>
-                <li><span>19°c / 8°c</span></li>
-                <li><span>Friday</span></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><i class="fas fa-cloud-sun forecast-icon"></i></li>
-                <li><span>21°c / 8°c</span></li>
-                <li><span>Saturday</span></li>
-              </ul>
-            </div>
-          </div>
+          <div class="row forecast" id="forecast"></div>
       </div>
     </div>  
     <div class="row footer">
