@@ -42,13 +42,16 @@ function showTemperature(response) {
     response.data.main.feels_like
   );
 
-  // display correct weather icon for location
+  // display correct weather icon for location and have correct alt text for img
   document
     .querySelector("#weather-icon")
     .setAttribute(
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  document
+    .querySelector("#weather-icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 // listening for user submissionn of city to display weather for
